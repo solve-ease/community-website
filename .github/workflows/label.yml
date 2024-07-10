@@ -1,45 +1,31 @@
-name: Labeler
+name: "Issue and PR Labeler"
 on:
-  pull_request_target:
   issues:
-    types: [opened, reopened]
+    types: [opened, edited, reopened]
+  pull_request_target:
+    types: [opened, edited]
+
+permissions:
+  issues: write
+  pull-requests: write
+  contents: read
 
 jobs:
-  label-pr:
+  triage-issues:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pull-requests: write
+    if: github.event_name == 'issues'
     steps:
-    - uses: actions/checkout@v3
-    - name: List contents of .github directory
-      run: ls -la .github
-    - name: Cat labeler.yml
-      run: cat .github/labeler.yml
-    - uses: actions/labeler@v4
-      if: github.event_name == 'pull_request_target'
+    - uses: github/issue-labeler@v3.4
       with:
-        repo-token: "${{ secrets.GITHUB_TOKEN }}"
-
-  label-issue:
-    runs-on: ubuntu-latest
-    permissions:
-      issues: write
-    steps:
-    - uses: actions/checkout@v3
-    - name: List contents of .github directory
-      run: ls -la .github
-    - name: Cat issue-labeler.yml
-      run: cat .github/issue-labeler.yml
-    - name: Debug event
-      env:
-        EVENT_CONTEXT: ${{ toJson(github.event) }}
-      run: |
-        echo "Event name: ${{ github.event_name }}"
-        echo "Event context: $EVENT_CONTEXT"
-    - uses: github/issue-labeler@v2
-      if: github.event_name == 'issues'
-      with:
-        repo-token: "${{ secrets.GITHUB_TOKEN }}"
         configuration-path: .github/issue-labeler.yml
         enable-versioned-regex: 0
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+  label-pr:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request_target'
+    steps:
+    - uses: actions/labeler@v4
+      with:
+        repo-token: "${{ secrets.GITHUB_TOKEN }}"
+        configuration-path: .github/labeler.yml
