@@ -66,10 +66,3 @@ mac:
 linux:
   - '(linux|ubuntu|debian|fedora)'
 
-# Community health
-duplicate:
-  - '(duplicate|duplicated|already reported)'
-wontfix:
-  - '(wontfix|won''t fix|not a bug)'
-invalid:
-  - '(invalid|not applicable|wrong repo)'
