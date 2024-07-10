@@ -26,8 +26,20 @@ jobs:
     permissions:
       issues: write
     steps:
-    - uses: actions/labeler@v4.0.0
+    - uses: actions/checkout@v3
+    - name: List contents of .github directory
+      run: ls -la .github
+    - name: Cat issue-labeler.yml
+      run: cat .github/issue-labeler.yml
+    - name: Debug event
+      env:
+        EVENT_CONTEXT: ${{ toJson(github.event) }}
+      run: |
+        echo "Event name: ${{ github.event_name }}"
+        echo "Event context: $EVENT_CONTEXT"
+    - uses: github/issue-labeler@v3
       if: github.event_name == 'issues'
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
         configuration-path: .github/issue-labeler.yml
+        enable-versioned-regex: 0
