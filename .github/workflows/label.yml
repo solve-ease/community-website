@@ -1,8 +1,11 @@
 name: Labeler
-on: [pull_request_target]
+on:
+  pull_request_target:
+  issues:
+    types: [opened, reopened]
 
 jobs:
-  label:
+  label-pr:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -14,5 +17,17 @@ jobs:
     - name: Cat labeler.yml
       run: cat .github/labeler.yml
     - uses: actions/labeler@v4.0.0
+      if: github.event_name == 'pull_request_target'
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
+
+  label-issue:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+    - uses: actions/labeler@v4.0.0
+      if: github.event_name == 'issues'
+      with:
+        repo-token: "${{ secrets.GITHUB_TOKEN }}"
+        configuration-path: .github/issue-labeler.yml
