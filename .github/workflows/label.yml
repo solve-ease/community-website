@@ -16,7 +16,7 @@ jobs:
       run: ls -la .github
     - name: Cat labeler.yml
       run: cat .github/labeler.yml
-    - uses: actions/labeler@v4.0.0
+    - uses: actions/labeler@v4
       if: github.event_name == 'pull_request_target'
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
@@ -37,7 +37,7 @@ jobs:
       run: |
         echo "Event name: ${{ github.event_name }}"
         echo "Event context: $EVENT_CONTEXT"
-    - uses: github/issue-labeler@v3
+    - uses: github/issue-labeler@v2
       if: github.event_name == 'issues'
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
