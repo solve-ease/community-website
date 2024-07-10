@@ -25,9 +25,9 @@ security:
   - '(security|vulnerability|exploit|auth|authentication)'
 
 # Community and contribution
-good first issue:
+"good first issue":
   - '(good first issue|beginner friendly|easy)'
-help wanted:
+"help wanted":
   - '(help wanted|looking for help|assistance needed)'
 discussion:
   - '(discussion|question|clarification|opinion)'
@@ -35,11 +35,11 @@ discussion:
 # Project management
 blocked:
   - '(blocked|blocker|dependency)'
-in progress:
+"in progress":
   - '(in progress|working on it|started)'
 
 # Type of change
-breaking change:
+"breaking change":
   - '(breaking change|backwards incompatible)'
 maintenance:
   - '(maintenance|cleanup|refactor|technical debt)'
@@ -70,6 +70,6 @@ linux:
 duplicate:
   - '(duplicate|duplicated|already reported)'
 wontfix:
-  - '(wontfix|won\'t fix|not a bug)'
+  - '(wontfix|won''t fix|not a bug)'
 invalid:
   - '(invalid|not applicable|wrong repo)'
