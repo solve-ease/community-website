@@ -80,3 +80,11 @@ Website outline plan including webpages and their content:
 ### 10. Error Page (404)
 - Message indicating the page was not found
 - Link to redirect back to the Home page
+- # Community Website 
+Built by Community for the community
+
+![Deployment](https://github.com/solve-ease/community-website/actions/workflows/deployment.yml/badge.svg)
+![Labeler](https://github.com/solve-ease/community-website/actions/workflows/label.yml/badge.svg)
+![Greetings](https://github.com/solve-ease/community-website/actions/workflows/greetings.yml/badge.svg)
+![CodeQL](https://github.com/solve-ease/community-website/actions/workflows/codeql.yml/badge.svg)
+![Dependencies](https://github.com/solve-ease/community-website/actions/workflows/dependency-review.yml/badge.svg)
