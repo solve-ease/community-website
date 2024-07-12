@@ -1,5 +1,5 @@
 # Community Website 
-Built By community for the community
+Built By community for the commun
 
 ## Description
 A platform where students and coders can collaborate and work on different projects. This website facilitates project management, communication, and collaboration among students.
