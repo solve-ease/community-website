@@ -1,6 +1,23 @@
 # Community Website 
 Built By community for the community
 
+<center>
+<img src = "https://readme-typing-svg.herokuapp.com/?color=red&size=40&width=1200&height=80&lines=StudentZynergy:%20Unleashing%20Innovative%20Collaboration"> 
+</center>
+<h3><p align="center">Welcome to StudentZynergy, where teamwork makes the dream work</h3></p>
+
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-cyan.svg?style=badge&color=green) 
+![GitHub forks](https://img.shields.io/github/forks/solve-ease/community-website?style=badge&color=green)
+![GitHub Repo stars](https://img.shields.io/github/stars/solve-ease/community-website?style=badge&color=green)
+![GitHub contributors](https://img.shields.io/github/contributors/solve-ease/community-website?style=badge&color=green)
+![GitHub last commit](https://img.shields.io/github/last-commit/solve-ease/community-website?style=badge&color=green)
+![GitHub repo size](https://img.shields.io/github/repo-size/solve-ease/community-website?style=badge&color=green)
+![Github](https://img.shields.io/github/license/solve-ease/community-website?style=badge&color=green)
+![GitHub issues](https://img.shields.io/github/issues/solve-ease/community-website?style=badge&color=green)
+![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/solve-ease/community-website?style=badge&color=green)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/solve-ease/community-website?style=badge&color=green)
+![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/solve-ease/community-website?style=badge&color=green)
+
 ## Description
 A platform where students and coders can collaborate and work on different projects. This website facilitates project management, communication, and collaboration among students.
 
