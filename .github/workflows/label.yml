@@ -15,17 +15,17 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event_name == 'issues'
     steps:
-    - uses: github/issue-labeler@v3.4
-      with:
-        configuration-path: .github/issue-labeler.yml
-        enable-versioned-regex: 0
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: github/issue-labeler@v3.4
+        with:
+          configuration-path: .github/issue-labeler.yml
+          enable-versioned-regex: 0
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
 
   label-pr:
     runs-on: ubuntu-latest
     if: github.event_name == 'pull_request_target'
     steps:
-    - uses: actions/labeler@v4
-      with:
-        repo-token: "${{ secrets.GITHUB_TOKEN }}"
-        configuration-path: .github/labeler.yml
+      - uses: actions/labeler@v4
+        with:
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          configuration-path: .github/labeler.yml
