@@ -1,10 +1,10 @@
 # Basic issue types
 bug:
-  - '(bug|fix|error|issue|crash|problem|failure)'
+  - '(bug|error|crash|failure)'
 enhancement:
   - '(feature|enhancement|improvement|request|idea)'
 documentation:
-  - '(doc|docs|documentation|typo|spelling|grammar)'
+  - '(doc|docs|documentation|typo|spelling|grammar|template)'
 
 # Severity and priority
 critical:
