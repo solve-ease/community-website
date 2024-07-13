@@ -87,5 +87,3 @@ Website outline plan including webpages and their content:
 ### 10. Error Page (404)
 - Message indicating the page was not found
 - Link to redirect back to the Home page
-- # Community Website
-  
