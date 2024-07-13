@@ -17,6 +17,13 @@ Built By community for the community
 ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/solve-ease/community-website?style=badge&color=green)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/solve-ease/community-website?style=badge&color=green)
 ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/solve-ease/community-website?style=badge&color=green)
+![Deployment](https://github.com/solve-ease/community-website/actions/workflows/deployment.yml/badge.svg).
+![Greetings](https://github.com/solve-ease/community-website/actions/workflows/greetings.yml/badge.svg)
+![CodeQL](https://github.com/solve-ease/community-website/actions/workflows/codeql.yml/badge.svg)
+![Dependencies](https://github.com/solve-ease/community-website/actions/workflows/dependency-review.yml/badge.svg)
+![Issue label](https://github.com/solve-ease/community-website/actions/workflows/issue-label.yml/badge.svg)
+![PR label](https://github.com/solve-ease/community-website/actions/workflows/pr-label.yml/badge.svg)
+
 
 ## Description
 A platform where students and coders can collaborate and work on different projects. This website facilitates project management, communication, and collaboration among students.
@@ -82,8 +89,3 @@ Website outline plan including webpages and their content:
 - Link to redirect back to the Home page
 - # Community Website
   
-Built by Community for the Communtiy
-![Deployment](https://github.com/solve-ease/community-website/actions/workflows/deployment.yml/badge.svg).
-![Greetings](https://github.com/solve-ease/community-website/actions/workflows/greetings.yml/badge.svg)
-![CodeQL](https://github.com/solve-ease/community-website/actions/workflows/codeql.yml/badge.svg)
-![Dependencies](https://github.com/solve-ease/community-website/actions/workflows/dependency-review.yml/badge.svg)
