@@ -1,5 +1,17 @@
 # Community Website 
 Built By community for the community
+<br>
+<br>
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ac823357-156c-4876-97b3-44f3d0bdb763/deploy-status)](https://app.netlify.com/sites/studentzynergy/deploys)
+![Deployment](https://github.com/solve-ease/community-website/actions/workflows/deployment.yml/badge.svg).
+![Greetings](https://github.com/solve-ease/community-website/actions/workflows/greetings.yml/badge.svg)
+![CodeQL](https://github.com/solve-ease/community-website/actions/workflows/codeql.yml/badge.svg)
+![Dependencies](https://github.com/solve-ease/community-website/actions/workflows/dependency-review.yml/badge.svg)
+![Issue label](https://github.com/solve-ease/community-website/actions/workflows/issue-label.yml/badge.svg)
+![PR label](https://github.com/solve-ease/community-website/actions/workflows/pr-label.yml/badge.svg)
+
+<br>
+<br>
 
 <center>
 <img src = "https://readme-typing-svg.herokuapp.com/?color=red&size=40&width=1200&height=80&lines=StudentZynergy:%20Unleashing%20Innovative%20Collaboration"> 
@@ -17,12 +29,6 @@ Built By community for the community
 ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/solve-ease/community-website?style=badge&color=green)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/solve-ease/community-website?style=badge&color=green)
 ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed/solve-ease/community-website?style=badge&color=green)
-![Deployment](https://github.com/solve-ease/community-website/actions/workflows/deployment.yml/badge.svg).
-![Greetings](https://github.com/solve-ease/community-website/actions/workflows/greetings.yml/badge.svg)
-![CodeQL](https://github.com/solve-ease/community-website/actions/workflows/codeql.yml/badge.svg)
-![Dependencies](https://github.com/solve-ease/community-website/actions/workflows/dependency-review.yml/badge.svg)
-![Issue label](https://github.com/solve-ease/community-website/actions/workflows/issue-label.yml/badge.svg)
-![PR label](https://github.com/solve-ease/community-website/actions/workflows/pr-label.yml/badge.svg)
 
 
 ## Description
