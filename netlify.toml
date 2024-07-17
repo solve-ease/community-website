@@ -1,0 +1,8 @@
+[build]
+  publish = "src"
+  command = "# no build command"
+
+[[redirects]]
+  from = "/*"
+  to = "/pages/index.html"
+  status = 200
