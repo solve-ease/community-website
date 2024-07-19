@@ -15,6 +15,49 @@
   box-sizing: border-box;
 }
 
+#preloader{
+  width: 100%;
+  height: 100vh;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* flex-wrap: wrap;
+  display: none; */
+
+}
+
+
+
+.loader-small{
+  height: 6rem;
+  width: 6rem;
+  border: 5px solid transparent;
+  border-top-color: var(--primary-color);
+  border-radius: 50%;
+  animation: loader 2s infinite linear;
+  margin: auto;
+  margin-top: 9.5%;
+  /* background: red; */
+}
+.loader-big{
+  height: 8rem;
+  width: 8rem;
+  border: 5px solid transparent;
+  border-radius: 50%;
+  border-top-color: var(--primary-color);
+  animation: loader 1.5s infinite linear;
+}
+@keyframes loader {
+  100%{
+    transform: rotate(360deg);
+  }  
+}
+
+
+
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--background-color);

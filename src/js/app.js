@@ -83,3 +83,20 @@ function animateShape(element) {
 }
 // Call the function when the DOM is loaded
 document.addEventListener('DOMContentLoaded', animateShapes);
+
+
+
+// ----Loader----
+
+const loader = document.getElementById("preloader");
+const body = document.querySelector("body");
+// body.addEventListener("load", myLoad)
+
+function myload(){
+    console.log("the dom is fully loaderd")
+    // if(loader.style.display === "flex"){
+    //     loader.style.display = "none";
+    // } 
+    //else loader.style.display = "flex";
+    loader.style.display = "none";
+}
