@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', animateShapes);
 
 const loader = document.getElementById("preloader");
 const body = document.querySelector("body");
-// body.addEventListener("load", myLoad)
+window.addEventListener("load", myload)
 
 function myload(){
     console.log("the dom is fully loaderd")
