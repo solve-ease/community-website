@@ -94,9 +94,5 @@ window.addEventListener("load", myload)
 
 function myload(){
     console.log("the dom is fully loaderd")
-    // if(loader.style.display === "flex"){
-    //     loader.style.display = "none";
-    // } 
-    //else loader.style.display = "flex";
     loader.style.display = "none";
 }

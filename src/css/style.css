@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Sketch&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
 
+@font-face {
+  font-family: "myfont";
+  src: url(/src/assets/vermins_vibes.otf);
+}
 :root {
   --primary-color: #160523;
   --secondary-color: #fff;
@@ -18,13 +23,16 @@
 #preloader{
   width: 100%;
   height: 100vh;
-  background: var(--primary-color);
+  background: linear-gradient(135deg, #C8ACD6, #9C77B9, #6F49A3, #433D8B, #2E236C, #17153B);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 20px;
   color: white;  
+  font-family:"myfont";
+  font-size: 1.9rem;
+  line-height: 3.5rem; 
 }
 
 
@@ -33,20 +41,39 @@
   height: 6rem;
   width: 6rem;
   border: 5px solid transparent;
-  border-top-color:#36C2CE;
+  border-top-color:white;
   border-radius: 50%;
-  animation: loader 2s infinite linear;
+  animation: loader 3s infinite linear;
   margin: auto;
   margin-top: 9.5%;
-  /* background: red; */
 }
 .loader-big{
   height: 8rem;
   width: 8rem;
   border: 5px solid transparent;
   border-radius: 50%;
-  border-top-color:#36C2CE;
+  border-top-color:white;
   animation: loader 1.5s infinite linear;
+}
+
+.third-circle{
+  height: 4rem;
+  width: 4rem;
+  border: 5px solid transparent;
+  border-top-color:white ;
+  border-radius: 50%;
+  animation: loader 3s infinite linear;
+  margin: auto;
+  margin-top: 12.5%;  
+}
+.still-circle{
+  height: 2rem;
+  width: 2rem;
+  background: white;
+  border-radius: 50%;
+  animation: loader 2s infinite linear;
+  margin: auto;
+  margin-top: 20%;  
 }
 
 
