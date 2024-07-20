@@ -2,15 +2,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
 
 @font-face {
-  font-family: "myfont";
-  src: url(/src/assets/vermins_vibes.otf);
+  font-family: "vermin";
+  src: url(../assets/fonts/vermins_vibes.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "hyper";
+  src: url(../assets/fonts/hyper_helix.ttf) format("truetype");
 }
 :root {
   --primary-color: #160523;
-  --secondary-color: #fff;
   --text-color: #333333;
-  --background-color: #fff;
+  --secondary-color: #fff;
   --base-font-size:1.2rem;
+  --vermin-vibes: "vermin", sans-serif;
+  --hyper-helix : "hyper", sans-serif;
 
 }
 
@@ -21,27 +27,37 @@
 }
 
 #preloader{
+  position: fixed;
+    top: 0;
+    left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  z-index: 99999;
   background: linear-gradient(135deg, #C8ACD6, #9C77B9, #6F49A3, #433D8B, #2E236C, #17153B);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 20px;
-  color: white;  
-  font-family:"myfont";
-  font-size: 1.9rem;
-  line-height: 3.5rem; 
+  color: var(--secondary-color);  
+   
 }
 
+.loader-name h1{
+  font-family: var(--hyper-helix);
+  font-size: 2.6rem;
+}
 
+.loader-name h2{
+  font-family: var(--vermin-vibes);
+  font-size: 2.3rem;
+}
 
 .loader-small{
   height: 6rem;
   width: 6rem;
   border: 5px solid transparent;
-  border-top-color:white;
+  border-top-color:var(--secondary-color);
   border-radius: 50%;
   animation: loader 3s infinite linear;
   margin: auto;
@@ -52,7 +68,7 @@
   width: 8rem;
   border: 5px solid transparent;
   border-radius: 50%;
-  border-top-color:white;
+  border-top-color:var(--secondary-color);
   animation: loader 1.5s infinite linear;
 }
 
@@ -60,7 +76,7 @@
   height: 4rem;
   width: 4rem;
   border: 5px solid transparent;
-  border-top-color:white ;
+  border-top-color:var(--secondary-color) ;
   border-radius: 50%;
   animation: loader 3s infinite linear;
   margin: auto;
@@ -69,7 +85,7 @@
 .still-circle{
   height: 2rem;
   width: 2rem;
-  background: white;
+  background: var(--secondary-color);
   border-radius: 50%;
   animation: loader 2s infinite linear;
   margin: auto;
@@ -88,8 +104,9 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: var(--background-color);
+  background-color: var(--secondary-color);
   color: var(--text-color);
+
 }
 
 header {
@@ -125,15 +142,15 @@ nav {
 }
 
 .nav-links a {
-  color: var(--background-color);
+  color: var(--secondary-color);
   text-decoration: none;
   font-weight: 400;
   transition: all 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: var(--background-color);
-  border-bottom: 2px solid var(--background-color);
+  color: var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
 }
 
 .nav-links-twice{
@@ -144,7 +161,7 @@ nav {
 }
 .github-icon{
   text-decoration: none;
-  color: var(--background-color);
+  color: var(--secondary-color);
 }
 .github-icon i{
   font-size: 1.2rem;
@@ -154,7 +171,7 @@ nav {
 }
 
 .github-icon:hover {
-  color: var(--background-color);
+  color: var(--secondary-color);
 }
 
 .login-btn {
@@ -168,7 +185,7 @@ nav {
 }
 
 .login-btn:hover {
-  background-color: var(--background-color);
+  background-color: var(--secondary-color);
 }
 
 .hero {
