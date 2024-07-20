@@ -83,3 +83,16 @@ function animateShape(element) {
 }
 // Call the function when the DOM is loaded
 document.addEventListener('DOMContentLoaded', animateShapes);
+
+
+
+// ----Loader----
+
+const loader = document.getElementById("preloader");
+const body = document.querySelector("body");
+window.addEventListener("load", myload)
+
+function myload(){
+    console.log("the dom is fully loaderd")
+    loader.style.display = "none";
+}
