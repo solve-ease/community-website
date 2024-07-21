@@ -87,12 +87,14 @@ document.addEventListener('DOMContentLoaded', animateShapes);
 
 
 // ----Loader----
-
 const loader = document.getElementById("preloader");
 const body = document.querySelector("body");
-window.addEventListener("load", myload)
 
-function myload(){
-    console.log("the dom is fully loaderd")
-    loader.style.display = "none";
+function preloadFunc() {
+    setTimeout(() => {
+        loader.style.display = "none";
+    }, 1000); //delay added
 }
+
+window.addEventListener("load", preloadFunc);
+
