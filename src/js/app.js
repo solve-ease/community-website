@@ -98,3 +98,76 @@ function preloadFunc() {
 
 window.addEventListener("load", preloadFunc);
 
+
+
+// other sections js 
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Animate elements on scroll
+    function animateOnScroll() {
+        const elements = document.querySelectorAll('.project-card, .contributor-card, .testimonial-card');
+        elements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            if (elementTop < windowHeight - 100) {
+                element.style.opacity = '1';
+                element.style.transform = 'translateY(0)';
+            }
+        });
+    }
+
+    window.addEventListener('scroll', animateOnScroll);
+    animateOnScroll(); // Initial check on page load
+
+    // Interactive hover effect for project cards
+    const projectCards = document.querySelectorAll('.project-card');
+    projectCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.backgroundColor = '#f0f0f0';
+        });
+        card.addEventListener('mouseleave', function() {
+            this.style.backgroundColor = '#fff';
+        });
+    });
+
+    // Testimonial carousel
+    const testimonials = document.querySelectorAll('.testimonial-card');
+    let currentTestimonial = 0;
+
+    function showNextTestimonial() {
+        testimonials[currentTestimonial].style.display = 'none';
+        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+        testimonials[currentTestimonial].style.display = 'block';
+    }
+
+    setInterval(showNextTestimonial, 5000); // Change testimonial every 5 seconds
+
+    // Dynamic content loading for "Learn More" buttons
+
+    // BACKEND PART - 
+    // document.querySelectorAll('.cta-btn').forEach(btn => {
+    //     btn.addEventListener('click', function(e) {
+    //         e.preventDefault();
+    //         const url = this.getAttribute('href');
+    //         fetch(url)
+    //             .then(response => response.text())
+    //             .then(data => {
+    //                 const tempDiv = document.createElement('div');
+    //                 tempDiv.innerHTML = data;
+    //                 const content = tempDiv.querySelector('main').innerHTML;
+    //                 document.querySelector('main').innerHTML = content;
+    //             })
+    //             .catch(error => console.error('Error:', error));
+    //     });
+    // });
+});
