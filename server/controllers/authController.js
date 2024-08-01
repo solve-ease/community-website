@@ -2,6 +2,7 @@ const { validationResult } = require('express-validator')
 const bcrypt = require('bcrypt')
 const pool = require('../db/index')
 const saltRounds = 10
+const jwt = require('jsonwebtoken')
 
 const register = async (req, res) => {
   const errors = validationResult(req)
@@ -18,23 +19,23 @@ const register = async (req, res) => {
         'INSERT INTO users (fName, lName, email, password) VALUES ($1, $2, $3, $4) RETURNING id',
         [fName, lName, email, hashedPassword]
       )
-      res.status(200).send('Registration successful')
+      res.status(200).json({ message: 'Registration successful' })
     } catch (queryError) {
       if (queryError.code === '23505') {
-        res.status(400).send('Email already exists')
+        res.status(400).json({ message: 'Email already exists' })
       } else {
         console.error('Error executing query:', queryError)
-        res.status(500).send('Error executing query')
+        res.status(500).json({ message: 'Error executing query' })
       }
     } finally {
       client.release()
     }
   } catch (e) {
     console.error(e)
-    res.status(500).send('Internal Server Error')
+    res.status(500).json({ message: 'Internal Server Error' })
   }
 }
-
+let refreshTokens = []
 const login = async (req, res) => {
   const errors = validationResult(req)
   if (!errors.isEmpty()) {
@@ -51,27 +52,54 @@ const login = async (req, res) => {
       )
 
       if (result.rows.length === 0) {
-        return res.status(400).send('Invalid email or password')
+        return res.status(400).json({ message: 'Invalid email or password' })
       }
-
-      const hashedPassword = result.rows[0].password
+      const user = result.rows[0]
+      const hashedPassword = user.password
       const isMatch = await bcrypt.compare(password, hashedPassword)
 
       if (!isMatch) {
-        return res.status(400).send('Invalid email or password')
+        return res.status(400).json({ message: 'Invalid email or password' })
       }
+      const accessToken = jwt.sign(
+        { id: user.id, username: user.username },
+        process.env.ACCESS_TOKEN_SECRET,
+        { expiresIn: '1h' }
+      )
+      const refreshToken = jwt.sign(
+        { id: user.id, username: user.username },
+        process.env.REFRESH_TOKEN_SECRET,
+        { expiresIn: '7d' }
+      )
+      refreshTokens.push(refreshToken)
 
-      res.status(200).send('Login successful')
+      res.json({ accessToken, refreshToken })
+      // res.status(200).send('Login successful')
     } finally {
       client.release()
     }
   } catch (e) {
     console.error(e)
-    res.status(500).send('Internal Server Error')
+    res.status(500).json({ message: 'Internal Server Error' })
   }
 }
+const token = (req, res) => {
+  const { token } = req.body
+  if (!token) return res.sendStatus(401)
+  if (!refreshTokens.includes(token)) return res.sendStatus(403)
 
+  jwt.verify(token, process.env.REFRESH_TOKEN_SECRET, (err, user) => {
+    if (err) return res.sendStatus(403)
+    const accessToken = jwt.sign(
+      { id: user.id, username: user.username },
+      process.env.ACCESS_TOKEN_SECRET,
+      { expiresIn: '1h' }
+    )
+    res.json({ accessToken })
+  })
+}
 module.exports = {
   register,
-  login
+  login,
+  token
 }

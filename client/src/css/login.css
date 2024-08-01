@@ -54,6 +54,7 @@ a {
   font-size: var(--font-large);
 }
 .blue-btn {
+  border-color: var(--color-primary);
   padding: 20px;
   height: 10vh;
   background-color: var(--color-primary);
