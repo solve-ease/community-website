@@ -1,5 +1,5 @@
+import { showCustomAlert } from './alert.js'
 import { sendUserData } from './api.js'
-
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('registrationForm')
   const fields = [
@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   form.addEventListener('submit', async function (e) {
     e.preventDefault()
+    showCustomAlert('registration successful')
     if (validateForm()) {
       //code for sending form data to server
       const formData = new FormData(form)
@@ -24,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       try {
         const response = await sendUserData(userData)
-        alert('Registration successful!')
+
         // form.reset()
       } catch (error) {
         console.error(

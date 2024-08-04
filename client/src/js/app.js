@@ -168,3 +168,48 @@ document.addEventListener('DOMContentLoaded', function () {
   //     });
   // });
 })
+//event listener to get user data from github and to display it
+document.addEventListener('DOMContentLoaded', fetchContributors)
+
+//function to get the contributors data from github
+async function fetchContributors() {
+  const owner = 'solve-ease'
+  const repo = 'community-website'
+  const url = `https://api.github.com/repos/${owner}/${repo}/contributors`
+  try {
+    const response = await fetch(url)
+    if (!response.ok) {
+      throw new Error('Network response was not ok')
+    }
+    const contributors = await response.json()
+    for (const contributor of contributors) {
+      await fetchContributorDetails(contributor.login)
+    }
+  } catch (error) {
+    console.error('There has been a problem with your fetch operation:', error)
+  }
+}
+async function fetchContributorDetails(username) {
+  const userUrl = `https://api.github.com/users/${username}`
+  try {
+    const response = await fetch(userUrl)
+    if (!response.ok) {
+      throw new Error('Network response was not ok')
+    }
+    const user = await response.json()
+    displayContributor(user)
+  } catch (error) {
+    console.error('There has been a problem with your fetch operation:', error)
+  }
+}
+async function displayContributor(user) {
+  const contributorsContainer = document.querySelector('.contributor-cards')
+  const contributorCard = document.createElement('div')
+  contributorCard.classList.add('contributor-card')
+  contributorCard.innerHTML = `
+        <img src="${user.avatar_url}" alt="${user.login}" />
+        <h3>${user.name}</h3>
+        <a href="${user.html_url}" target="_blank" class="cta-btn">View Profile</a>
+    `
+  contributorsContainer.appendChild(contributorCard)
+}
