@@ -21,7 +21,7 @@
 
         </div>
         <div class="bottom-section">
-            <div class="login-box">
+            <form class="login-box" id="login-form">
                 <h1 class="input-box-heading">Login</h1>
                 <img src="https://static.vecteezy.com/system/resources/previews/002/318/271/non_2x/user-profile-icon-free-vector.jpg"
                     alt="profile-picture-icon" class="profile-picture">
@@ -30,12 +30,12 @@
                         <span class="material-symbols-outlined login-form-icon">
                             person
                         </span>
-                        <p>Username</p>
+                        <p>Email</p>
                     </div>
-                    <input class="input-box" name="0" autocomplete="off" />
+                    <input class="input-box" name="email" autocomplete="off" />
                 </div>
                 <div class="input-box-div">
-                    <input class="input-box" name="1" autocomplete="off" />
+                    <input class="input-box" name="password" autocomplete="off" />
                     <div class="input-box-text-div">
                         <span class="material-symbols-outlined login-form-icon">
                             lock
@@ -46,16 +46,16 @@
                 <div class="button-div">
 
                     <a href="register.html" class="blue-border-btn">Sign up</a>
-                    <a href="login.html" class="blue-btn">Sign in</a>
+                    <button class="blue-btn" type="submit">Sign in</button>
                 </div>
                 <div>
                     <p>Forgot Password?</p>
                 </div>
-            </div>
+            </form>
             <img src="../assets/img/login1-img.png" alt="cartoon-login" class="login-image">
         </div>
     </div>
-    <script src="../js/login.js"></script>
+    <script type="module" src="../js/login.js"></script>
 </body>
 
 </html>

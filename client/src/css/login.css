@@ -15,6 +15,9 @@
   --font-small: 1.25rem;
   --font-ex-small: 0.8rem;
 }
+a {
+  text-decoration: none;
+}
 .material-symbols-outlined {
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
   color: var(--color-secondary);
@@ -51,6 +54,7 @@
   font-size: var(--font-large);
 }
 .blue-btn {
+  border-color: var(--color-primary);
   padding: 20px;
   height: 10vh;
   background-color: var(--color-primary);
