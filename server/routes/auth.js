@@ -6,12 +6,12 @@ const router = express.Router()
 
 
 // root
-app.get('/', (req, res) => {
+router.get('/', (req, res) => {
   res.send('Welome to Solve-Ease Backend!');
 });
 
 // health-check
-app.get('/health-check', (req, res) => {
+router.get('/health-check', (req, res) => {
   res.status(500).json({ message: 'Status : OK' })
 
 });
