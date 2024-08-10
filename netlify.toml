@@ -1,5 +1,5 @@
 [build]
-  publish = "client"
+  publish = "client/src"
   command = "# no build command"
 
 [[redirects]]
