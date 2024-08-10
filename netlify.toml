@@ -1,8 +1,18 @@
 [build]
-  publish = "client/src"
+  publish = "client"
   command = "# no build command"
 
 [[redirects]]
+  from = "/css/*"
+  to = "/src/css/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/js/*"
+  to = "/src/js/:splat"
+  status = 200
+
+[[redirects]]
   from = "/*"
-  to = "src/pages/index.html"
+  to = "/src/pages/index.html"
   status = 200
