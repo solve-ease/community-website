@@ -61,6 +61,116 @@
 
       <!-- section  -->
 
+      <main class="dashboard-container">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="#" class="active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#"><i class="fas fa-newspaper"></i> News Feed</a></li>
+                <li><a href="#"><i class="fas fa-envelope"></i> Messages</a></li>
+                <li><a href="#"><i class="fas fa-users"></i> Groups</a></li>
+                <li><a href="#"><i class="fas fa-user-friends"></i> Community</a></li>
+                <li><a href="#"><i class="fas fa-calendar-alt"></i> Events</a></li>
+                <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                <li><a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </aside>
+
+        <section class="main-content">
+            <div class="profile-header">
+                <div class="banner">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9zER_1HkhgMVfMvafQxRr-ZzZ0K9VzpDa7Cd3nRnoaZjjmoDwrYCYL0ckGzTe2TfGJ2k&usqp=CAU" alt="Profile Banner" id="profile-banner">
+                    <button id="update-banner" class="btn-update"><i class="fas fa-camera"></i> Update Banner</button>
+                </div>
+                <div class="profile-info">
+                    <img src="https://i.pinimg.com/236x/41/7b/67/417b67c2c946c28e2cca22d777b84df8.jpg" alt="Profile Picture" class="profile-picture">
+                    <h1>Muskan Ai</h1>
+                    <p>AI Digital Assitant</p>
+                    <div class="profile-actions">
+                        <button class="btn-primary">Follow</button>
+                        <button class="btn-secondary">Contact</button>
+                    </div>
+                </div>
+                <nav class="profile-nav">
+                    <a href="#" class="active">News</a>
+                    <a href="#">Photos</a>
+                    <a href="#">About</a>
+                    <a href="#">Video</a>
+                    <a href="#">Events</a>
+                    <a href="#">Store</a>
+                </nav>
+            </div>
+
+            <div class="content-grid">
+                <div class="main-column">
+                    <div class="post-form">
+                        <textarea placeholder="What's on your mind?"></textarea>
+                        <div class="post-actions">
+                            <button class="btn-photo"><i class="fas fa-camera"></i> Photo</button>
+                            <button class="btn-post">Post</button>
+                        </div>
+                    </div>
+
+                    <div class="posts">
+                        <article class="post">
+                            <header class="post-header">
+                                <img src="https://i.pinimg.com/236x/41/7b/67/417b67c2c946c28e2cca22d777b84df8.jpg" alt="Muskan Ai" class="post-avatar">
+                                <div>
+                                    <h3>Muskan Ai</h3>
+                                    <time>2 hours ago</time>
+                                </div>
+                            </header>
+                            <p>Just finished a great project! Here's a sneak peek:</p>
+                            <img src="https://adarshmaurya.onionreads.com/img/solve-ease-cert.webp" alt="Project preview" class="post-image">
+                            <div class="post-actions">
+                                <button><i class="fas fa-thumbs-up"></i> Like</button>
+                                <button><i class="fas fa-comment"></i> Comment</button>
+                                <button><i class="fas fa-share"></i> Share</button>
+                            </div>
+                        </article>
+                        <!-- More posts would go here -->
+                    </div>
+                </div>
+
+                <aside class="side-column">
+                    <section class="about-section">
+                        <h2>About</h2>
+                        <ul>
+                            <li><i class="fas fa-briefcase"></i> AI Digital Assitant</li>
+                            <li><i class="fas fa-envelope"></i> muskan@onionreads.com</li>
+                            <li><i class="fas fa-map-marker-alt"></i> India, IN</li>
+                            <li><i class="fas fa-calendar-alt"></i> Joined August 15, 2024</li>
+                        </ul>
+                        <div class="stats">
+                            <div>
+                                <strong>500</strong>
+                                <span>Followers</span>
+                            </div>
+                            <div>
+                                <strong>150</strong>
+                                <span>Following</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="people-you-may-know">
+                        <h2>People You May Know</h2>
+                        <ul>
+                            <li>
+                                <img src="https://avatars.githubusercontent.com/u/148576891?v=4" alt="Jane Doe">
+                                <div>
+                                    <h4>Dharmesh Tan</h4>
+                                    <p>UX Designer</p>
+                                </div>
+                                <button class="btn-connect"><i class="fas fa-user-plus"></i></button>
+                            </li>
+                            <!-- More suggestions would go here -->
+                        </ul>
+                    </section>
+                </aside>
+            </div>
+        </section>
+    </main>
+
       <!-- backto top  -->
 
       <button id="back-to-top" class="back-to-top">
