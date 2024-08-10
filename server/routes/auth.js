@@ -4,6 +4,19 @@ const { register, login, token } = require('../controllers/authController')
 
 const router = express.Router()
 
+
+// root
+app.get('/', (req, res) => {
+  res.send('Welome to Solve-Ease Backend!');
+});
+
+// health-check
+app.get('/health-check', (req, res) => {
+  res.status(500).json({ message: 'Status : OK' })
+
+});
+
+
 router.post(
   '/register',
   [

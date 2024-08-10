@@ -19,6 +19,7 @@
   --base-font-size: 1.2rem;
   --vermin-vibes: "vermin", sans-serif;
   --hyper-helix: "hyper", sans-serif;
+  --font-primary: Poppins, sans-serif;
 }
 
 * {
@@ -27,7 +28,7 @@
   box-sizing: border-box;
 }
 
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
   scrollbar-width: none;
 }
 
@@ -131,7 +132,7 @@ nav {
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 500;
   color: var(--secondary-color);
 }
@@ -731,15 +732,14 @@ h2 {
   .contributor-cards,
   .testimonial-cards {
     flex-direction: column !important;
-    
   }
-  .about{
+  .about {
     padding: 80px 20px;
   }
-  .about-content{
+  .about-content {
     padding-right: 0px;
   }
-  .hero-content h1{
+  .hero-content h1 {
     font-size: 2.2rem;
   }
 }

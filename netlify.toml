@@ -3,6 +3,27 @@
   command = "# no build command"
 
 [[redirects]]
+  from = "/css/*"
+  to = "/src/css/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/js/*"
+  to = "/src/js/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/assets/fonts/*"
+  to = "/src/assets/fonts/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/assets/img/*"
+  to = "/src/assets/img/:splat"
+  status = 200
+
+
+[[redirects]]
   from = "/*"
-  to = "src/pages/index.html"
+  to = "/src/pages/index.html"
   status = 200

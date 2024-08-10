@@ -1,0 +1,27 @@
+.prof-social-head {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-primary);
+  color: var(--accent-color);
+}
+input[type="text"],
+input[type="url"] {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* .submit-btn {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+} */
