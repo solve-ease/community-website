@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,7 +17,7 @@
     />
     <link rel="stylesheet" href="../css/footer.css" />
     <link rel="stylesheet" href="../css/profile_creation.css" />
-    <!-- <link rel="stylesheet" href="../css.css"> -->
+    <link rel="stylesheet" href="../css/profile_creation_tw.css">
   </head>
   <body>
 
@@ -62,50 +64,97 @@
       <!-- section  -->
 
       <section class="prof-creation">
-        <main>
-          <h1>Create Your Profile</h1>
-          <form id="profileForm">
-            <div class="profile-image">
-              <img
-                id="profilePreview"
-                src="https://i.pinimg.com/236x/41/7b/67/417b67c2c946c28e2cca22d777b84df8.jpg"
-                alt="Profile Picture"
-              />
-              <label for="profileImage" class="upload-btn">Upload Photo</label>
-              <input type="file" id="profileImage" accept="image/*" hidden />
-            </div>
-            <div class="form-group">
-              <label for="fullName">Full Name</label>
-              <input type="text" id="fullName" name="fullName" required />
-            </div>
-            <!-- <div class="form-group">
-              <label for="location">Location</label>
-              <input type="text" id="location" name="location" required />
-            </div> -->
-            <!-- <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required />
-            </div> -->
-            <div class="form-group">
-              <label for="phone">Phone</label>
-              <input type="tel" id="phone" name="phone" />
-            </div>
-            <div class="form-group">
-              <label for="birthday">Birthday</label>
-              <input type="date" id="birthday" name="birthday" />
-            </div>
-            <div class="form-group">
-              <label for="bio">Bio</label>
-              <textarea id="bio" name="bio" rows="4"></textarea>
-            </div>
-            <div class="form-group">
-              <label for="skills">Skills (comma-separated)</label>
-              <input type="text" id="skills" name="skills" />
-            </div>
-            <button type="submit" class="submit-btn">Create Profile</button>
-          </form>
-        
+        <h1>Additional Profile Details</h1>
+        <form id="additionalProfileForm">
+          <div class="form-group">
+            <label for="education"
+              ><i class="fas fa-graduation-cap"></i> Education</label
+            >
+            <input
+              type="text"
+              id="education"
+              name="education"
+              placeholder="e.g., Bachelor's in Computer Science, XYZ University"
+            />
+          </div>
+          <div class="form-group">
+            <label for="occupation"><i class="fas fa-briefcase"></i> Occupation</label>
+            <input
+              type="text"
+              id="occupation"
+              name="occupation"
+              placeholder="e.g., Software Developer"
+            />
+          </div>
+          <div class="form-group">
+            <label for="interests"><i class="fas fa-heart"></i> Interests</label>
+            <input
+              type="text"
+              id="interests"
+              name="interests"
+              placeholder="e.g., Coding, Photography, Traveling"
+            />
+          </div>
+          <div class="form-group">
+            <label for="languages"><i class="fas fa-language"></i> Languages</label>
+            <input
+              type="text"
+              id="languages"
+              name="languages"
+              placeholder="e.g., English, Spanish, Mandarin"
+            />
+          </div>
+          <h2 class="prof-social-head">Social Media Handles</h2>
+          <div class="form-group">
+            <label for="twitter"><i class="fab fa-twitter"></i> Twitter</label>
+            <input
+              type="text"
+              id="twitter"
+              name="twitter"
+              placeholder="@yourusername"
+            />
+          </div>
+          <div class="form-group">
+            <label for="instagram"><i class="fab fa-instagram"></i> Instagram</label>
+            <input
+              type="text"
+              id="instagram"
+              name="instagram"
+              placeholder="@yourusername"
+            />
+          </div>
+          <div class="form-group">
+            <label for="linkedin"><i class="fab fa-linkedin"></i> LinkedIn</label>
+            <input
+              type="text"
+              id="linkedin"
+              name="linkedin"
+              placeholder="linkedin.com/in/yourusername"
+            />
+          </div>
+          <div class="form-group">
+            <label for="github"><i class="fab fa-github"></i> GitHub</label>
+            <input
+              type="text"
+              id="github"
+              name="github"
+              placeholder="github.com/yourusername"
+            />
+          </div>
+          <div class="form-group">
+            <label for="website"><i class="fas fa-globe"></i> Personal Website</label>
+            <input
+              type="url"
+              id="website"
+              name="website"
+              placeholder="https://www.yourwebsite.com"
+            />
+          </div>
+          <button type="submit" class="submit-btn">Complete Profile</button>
+        </form>
       </section>
+
+
 
       <!-- backto top  -->
 
@@ -188,5 +237,6 @@
     <script src="../js/back_top.js"></script>
     <script src="../js/navbar.js"></script>
     <script src="../js/profile_creation.js"></script>
+    <script src="../js/profile_creation_tw.js"></script>
   </body>
 </html>

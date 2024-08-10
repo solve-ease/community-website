@@ -19,7 +19,9 @@ document.addEventListener('DOMContentLoaded', function () {
         e.preventDefault();
         if (validateForm()) {
             // Here you would typically send the form data to your server
-            alert('Profile created successfully!');
+            alert('Basic Profile created successfully!');
+
+            window.location.href = 'profile_creation_tw.html';
         }
     });
 
