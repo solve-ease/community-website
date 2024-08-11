@@ -93,39 +93,33 @@ const token = (req, res) => {
 }
 
 // profile pic upload
-
 const multer = require('multer');
-const path = require('path');
+const multerS3 = require('multer-s3');
+const AWS = require('aws-sdk');
 
-// Set storage engine
-const storage = multer.diskStorage({
-  destination: './uploads/profile_pics',
-  filename: (req, file, cb) => {
-    cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
-  }
+// Configure AWS S3
+const s3 = new AWS.S3({
+  accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+  region: process.env.AWS_REGION,
 });
 
-// Init upload
+// Set up Multer to use S3 for storage
 const upload = multer({
-  storage: storage,
-  limits: { fileSize: 1000000 }, // Limit file size to 1MB
-  fileFilter: (req, file, cb) => {
-    checkFileType(file, cb);
-  }
-}).single('profileImage');
+  storage: multerS3({
+    s3: s3,
+    bucket: 'your-s3-bucket-name',
+    metadata: (req, file, cb) => {
+      cb(null, { fieldName: file.fieldname });
+    },
+    key: (req, file, cb) => {
+      cb(null, Date.now().toString() + '-' + file.originalname);
+    },
+  }),
+});
 
-// Check file type
-function checkFileType(file, cb) {
-  const filetypes = /jpeg|jpg|png|gif/;
-  const extname = filetypes.test(path.extname(file.originalname).toLowerCase());
-  const mimetype = filetypes.test(file.mimetype);
 
-  if (mimetype && extname) {
-    return cb(null, true);
-  } else {
-    cb('Error: Images Only!');
-  }
-}
+
 
 
 
@@ -133,5 +127,6 @@ function checkFileType(file, cb) {
 module.exports = {
   register,
   login,
-  token
+  token,
+  upload
 }

@@ -53,20 +53,8 @@ router.post('/create-profile', [
 
 
 
-router.post('/upload-profile-pic', (req, res) => {
-  upload(req, res, (err) => {
-    if (err) {
-      res.status(400).json({ message: err });
-    } else {
-      if (req.file === undefined) {
-        res.status(400).json({ message: 'No file selected!' });
-      } else {
-        // Save the file path in the database
-        const filePath = `/uploads/profile_pics/${req.file.filename}`;
-        // Continue with saving to the database
-      }
-    }
-  });
+router.post('/upload-profile-pic', upload.single('profileImage'), (req, res) => {
+  res.send('File uploaded to S3!');
 });
 
 // additional profile details
