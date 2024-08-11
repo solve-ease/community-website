@@ -1,71 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register | StudentZynergy Community</title>
-    <link rel="stylesheet" href="../css/register.css">
-    <link rel="stylesheet" href="../css/alert.css">
-    <script src="https://kit.fontawesome.com/9a057ab455.js" crossorigin="anonymous"></script>
-</head>
+    <link rel="stylesheet" href="../css/register.css" />
+    <link rel="stylesheet" href="../css/alert.css" />
+    <script
+      src="https://kit.fontawesome.com/9a057ab455.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<body>
-
+  <body>
     <div id="particles-js"></div>
     <div class="container">
-        <div class="left-panel">
-            <img src="../assets/img/signup-img2.webp" alt="StudentZynergy">
-            <h2>Connect & Collaborate</h2>
-            <p>Join our community of students and start your journey!</p>
-            <div class="floating-shapes">
-                <div class="shape"></div>
-                <div class="shape"></div>
-                <div class="shape"></div>
+      <div class="left-panel">
+        <img src="../assets/img/signup-img2.webp" alt="StudentZynergy" />
+        <h2>Connect & Collaborate</h2>
+        <p>Join our community of students and start your journey!</p>
+        <div class="floating-shapes">
+          <div class="shape"></div>
+          <div class="shape"></div>
+          <div class="shape"></div>
+        </div>
+      </div>
+      <div class="right-panel">
+        <h1>Create an Account</h1>
+        <form id="registrationForm">
+          <div id="form-naming-group" class="form-group">
+            <div class="form-group-first">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" required />
+              <span class="error" id="firstNameError"></span>
             </div>
-        </div>
-        <div class="right-panel">
-            <h1>Create an Account</h1>
-            <form id="registrationForm">
-                <div id="form-naming-group" class="form-group">
-                    <div class="form-group-first">
-                        <label for="firstName">First Name</label>
-                        <input type="text" id="firstName" name="firstName" required>
-                        <span class="error" id="firstNameError"></span>
-                    </div>
 
-                    <div class="form-group-second">
-                        <label for="lastName">Last Name</label>
-                        <input type="text" id="lastName" name="lastName" required>
-                        <span class="error" id="lastNameError"></span>
-                    </div>
-                </div>
+            <div class="form-group-second">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" required />
+              <span class="error" id="lastNameError"></span>
+            </div>
+          </div>
 
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                    <span class="error" id="emailError"></span>
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" required>
-                    <span class="error" id="passwordError"></span>
-                </div>
-                <div class="form-group">
-                    <label for="confirmPassword">Confirm Password</label>
-                    <input type="password" id="confirmPassword" name="confirmPassword" required>
-                    <span class="error" id="confirmPasswordError"></span>
-                </div>
-                <p>By signing up I agree to the <a href="terms_and_conditions.html">terms and conditions </a> and <a
-                        href="privacy_policy.html">privacy policy. </a></p>
-                <button type="submit">Register</button>
-            </form>
-        </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+            <span class="error" id="emailError"></span>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required />
+            <span class="error" id="passwordError"></span>
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword">Confirm Password</label>
+            <input
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+              required
+            />
+            <span class="error" id="confirmPasswordError"></span>
+          </div>
+          <p>
+            By signing up I agree to the
+            <a href="terms_and_conditions.html">terms and conditions </a> and
+            <a href="privacy_policy.html">privacy policy. </a>
+          </p>
+          <button type="submit">Register</button>
+        </form>
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="../js/particle_effect.js"></script>
     <script type="module" src="../js/register.js"></script>
     <script type="module" src="../js/alert.js"></script>
-</body>
-
+    <script type="module" src="../js/config.js"></script>
+  </body>
 </html>

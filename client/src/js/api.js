@@ -42,6 +42,16 @@ export async function login(userData) {
       localStorage.setItem('accessToken', data.accessToken)
       document.cookie = `refreshToken=${data.refreshToken}; HttpOnly`
       alert('Login successful!')
+
+      // checks for new profile creation
+      let profCreated = false; // need to feteched and verified from the backend
+      if (!profCreated) {
+        window.location.href = 'profile_creation.html'
+      }
+      else {
+        window.location.href = 'user_dashboard.html'
+      }
+
     } else {
       alert(data.message)
     }

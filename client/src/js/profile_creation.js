@@ -27,25 +27,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function validateForm() {
         let isValid = true;
-        const fullName = document.getElementById('fullName');
-        const email = document.getElementById('email');
+
+        // username check is required for existing users to be fetched from the backend
+
+        const username = document.getElementById('username');
+        // const email = document.getElementById('email');
         const phone = document.getElementById('phone');
 
         // Clear previous error messages
         clearErrors();
 
-        if (fullName.value.trim() === '') {
-            showError(fullName, 'Full name is required');
+        if (username.value.trim() === '') {
+            showError(username, 'Full name is required');
             isValid = false;
         }
 
-        if (email.value.trim() === '') {
-            showError(email, 'Email is required');
-            isValid = false;
-        } else if (!isValidEmail(email.value)) {
-            showError(email, 'Please enter a valid email address');
-            isValid = false;
-        }
 
         if (phone.value.trim() !== '' && !isValidPhone(phone.value)) {
             showError(phone, 'Please enter a valid phone number');

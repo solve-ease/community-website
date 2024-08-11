@@ -25,6 +25,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
       try {
         const response = await sendUserData(userData)
+        console.log(response)
+
+        if (response.message === 'Registration successful') {
+          // showCustomAlert('Registration successful')
+          // checks for new profile creation
+          let profCreated = false; // need to feteched and verified from the backend
+          if (!profCreated) {
+            window.location.href = 'profile_creation.html'
+          }
+          else {
+            window.location.href = 'user_dashboard.html'
+          }
+
+        }
 
         // form.reset()
       } catch (error) {
