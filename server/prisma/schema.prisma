@@ -21,3 +21,37 @@ model User {
   email     String  @unique
   password  String
 }
+
+model UserProfile {
+  id        Int             @id @default(autoincrement())
+  fullName  String
+  phone     String?
+  birthday  DateTime?
+  bio       String?
+  skills    String?
+  imageUrl  String?
+  createdAt DateTime        @default(now())
+  updatedAt DateTime        @updatedAt
+  additionalDetails AdditionalDetails?
+
+  @@map("user_profiles")
+}
+
+model AdditionalDetails {
+  id          Int          @id @default(autoincrement())
+  education   String?
+  occupation  String?
+  interests   String?
+  languages   String?
+  twitter     String?
+  instagram   String?
+  linkedin    String?
+  github      String?
+  website     String?
+  userProfile UserProfile  @relation(fields: [userId], references: [id])
+  userId      Int          @unique
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+
+  @@map("additional_details")
+}
