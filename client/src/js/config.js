@@ -6,5 +6,5 @@
 
 // Production configuration
 export const CONFIG = {
-    API_ENDPOINT: 'https://student-zynergy.vercel.app/'
+    API_ENDPOINT: 'https://student-zynergy.vercel.app'
 }
